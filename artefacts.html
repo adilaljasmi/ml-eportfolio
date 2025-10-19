@@ -293,6 +293,81 @@
     </div>
 </div>
 
+<!-- Unit 6 -->
+<div class="unit-section">
+    <h2>🎯 Unit 6: K-Means Clustering Seminar</h2>
+    <div class="unit-content">
+        <h3>Seminar Preparation: K-Means Clustering Tutorial and Dataset Analysis</h3>
+        
+        <div class="topic-box">
+            <p class="topic-label">Seminar Focus:</p>
+            <p>Theoretical understanding and practical implementation of K-Means clustering across three datasets: Iris, Wine, and WeatherAUS</p>
+        </div>
+        
+        <div class="analysis-section">
+            <h4>Task A: Iris Dataset Analysis</h4>
+            <div class="highlight-box">
+                <p>"The Iris dataset serves as an ideal introduction to clustering due to its well-defined clusters. Working with 4 features (sepal/petal measurements) after removing species labels demonstrates unsupervised learning principles. The challenge lies in determining optimal K value without prior knowledge of the three species."</p>
+            </div>
+            <p class="skills-note">Key insight: K-Means successfully identifies natural groupings that correspond to biological species, validating the algorithm's ability to discover inherent data structure.</p>
+        </div>
+        
+        <div class="analysis-section">
+            <h4>Task B: Wine Dataset Analysis</h4>
+            <div class="highlight-box">
+                <p>"Wine dataset presents increased complexity with 13 chemical features. The elbow method suggests K=3, aligning with three wine cultivars. This demonstrates K-Means' effectiveness in high-dimensional chemical analysis where human intuition fails."</p>
+            </div>
+            <p class="skills-note">Challenge addressed: Feature scaling becomes critical with varying measurement units (alcohol percentage vs. magnesium content), requiring standardization for meaningful distance calculations.</p>
+        </div>
+        
+        <div class="analysis-section">
+            <h4>Task C: WeatherAUS Dataset</h4>
+            <div class="highlight-box">
+                <p>"Real-world complexity emerges with weather data: missing values, mixed data types, and temporal patterns. Preprocessing decisions significantly impact clustering results. Testing K values from 2 to 6 reveals weather patterns aren't clearly separated, reflecting nature's continuous variations."</p>
+            </div>
+            <p class="skills-note">Professional consideration: Weather clustering demonstrates domain knowledge importance - meteorological patterns may not align with mathematical clusters.</p>
+        </div>
+        
+        <div class="outcomes-section">
+            <h4>Theoretical Understanding Developed</h4>
+            <ul class="styled-list">
+                <li>K-Means minimizes within-cluster sum of squares (WCSS) through iterative optimization</li>
+                <li>Algorithm convergence guaranteed but local minima risk requires multiple initializations</li>
+                <li>Elbow method provides heuristic for K selection but domain knowledge remains crucial</li>
+                <li>Euclidean distance assumption implies spherical clusters - limitation for elongated patterns</li>
+                <li>Computational complexity O(n*k*i*d) makes it scalable for large datasets</li>
+            </ul>
+        </div>
+        
+        <div class="analysis-section">
+            <h4>Critical Algorithm Evaluation</h4>
+            <div class="highlight-box">
+                <p>"K-Means assumes clusters of similar size and density, which rarely holds in real data. The WeatherAUS results particularly highlight this limitation - weather patterns don't respect geometric boundaries. Alternative algorithms like DBSCAN or Gaussian Mixture Models might better capture natural phenomena."</p>
+            </div>
+        </div>
+        
+        <div class="outcomes-section">
+            <h4>Professional Skills Developed</h4>
+            <ul class="styled-list">
+                <li>Articulated ethical issues: Weather clustering for insurance pricing raises fairness concerns</li>
+                <li>Understood dataset challenges: Missing data, mixed types, temporal dependencies</li>
+                <li>Developed team collaboration: Discussed preprocessing strategies and validation approaches</li>
+                <li>Applied real-life perspectives: Connected clustering to customer segmentation, anomaly detection</li>
+                <li>Practiced algorithm selection: Matched clustering approach to data characteristics</li>
+            </ul>
+        </div>
+        
+        <div class="metadata-row">
+            <span class="meta-item"><strong>Team Discussion Topics:</strong> Preprocessing pipelines, validation metrics, business applications</span>
+            <span class="meta-item"><strong>Tools Used:</strong> Jupyter Notebook, scikit-learn, matplotlib</span>
+        </div>
+        
+        <div class="evidence-links">
+            <p style="color: #6c757d; font-style: italic;">Seminar preparation completed through theoretical study and algorithm analysis</p>
+        </div>
+    </div>
+</div>
+
 <style>
 .unit-section {
     background: #f8f9fa;
