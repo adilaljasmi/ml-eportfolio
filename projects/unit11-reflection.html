@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit 11: Deep Learning Project Reflection</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+</head>
+<body class="is-preload">
+    <div id="wrapper">
+        <header id="header">
+            <a href="../index.html" class="logo"><strong>ML E-Portfolio</strong> <span>by ADIL ALJASMI</span></a>
+        </header>
+
+        <div id="main" class="alt">
+            <section id="one">
+                <div class="inner">
+                    <header class="major">
+                        <h1>Unit 11: Deep Learning for CIFAR-10 - Reflection</h1>
+                    </header>
+
+                    <h2>Project Evolution</h2>
+                    <p>This individual project challenged me to move beyond visualization (Unit 6) to building actual machine learning models. The progression from analyzing others' models to creating my own marked a significant milestone in my ML journey.</p>
+
+                    <h2>Technical Achievements</h2>
+                    <h3>What I Built:</h3>
+                    <ul>
+                        <li>Custom CNN architecture from scratch achieving 88.34% accuracy</li>
+                        <li>Comprehensive comparison framework testing multiple approaches</li>
+                        <li>Hyperparameter optimization across 9 configurations</li>
+                        <li>Architecture analysis comparing Deep, Wide, Shallow, and Residual designs</li>
+                    </ul>
+
+                    <h3>Key Technical Skills Developed:</h3>
+                    <ul>
+                        <li><strong>Model Architecture Design:</strong> Understanding how depth, width, and parameters affect performance</li>
+                        <li><strong>Training Dynamics:</strong> Learning rate scheduling, early stopping, regularization</li>
+                        <li><strong>Performance Analysis:</strong> Confusion matrices, confidence calibration, per-class metrics</li>
+                        <li><strong>Computational Efficiency:</strong> Balancing accuracy with training time and model size</li>
+                    </ul>
+
+                    <h2>Critical Learning Moments</h2>
+                    
+                    <h3>The Augmentation Surprise:</h3>
+                    <p>Conventional wisdom says data augmentation always helps. My experiments proved otherwise - aggressive augmentation on 32x32 images destroyed critical features, reducing accuracy by up to 52%. This taught me to question assumptions and validate through experimentation.</p>
+
+                    <h3>Transfer Learning Failure:</h3>
+                    <p>EfficientNetB0, trained on ImageNet, performed terribly (57% vs 88% for custom CNN). The resolution mismatch (224x224 → 32x32) was insurmountable. Key lesson: pre-trained models aren't universal solutions.</p>
+
+                    <h3>Architecture Insights:</h3>
+                    <p>The Wide model with 8.84M parameters performed worse than the Deep model with 1.47M parameters. This reinforced that architectural design matters more than raw parameter count.</p>
+
+                    <h2>Challenges and Solutions</h2>
+                    <table>
+                        <tr>
+                            <th>Challenge</th>
+                            <th>Solution</th>
+                            <th>Learning</th>
+                        </tr>
+                        <tr>
+                            <td>Cat/Dog classification accuracy only 72%</td>
+                            <td>Analyzed confusion matrix, identified feature similarity</td>
+                            <td>Some problems are inherently harder; biological entities share features</td>
+                        </tr>
+                        <tr>
+                            <td>Training time constraints on Colab</td>
+                            <td>Optimized batch size, used early stopping</td>
+                            <td>Efficiency matters in real-world ML</td>
+                        </tr>
+                        <tr>
+                            <td>Overfitting concerns</td>
+                            <td>Implemented dropout, monitored train-val gap</td>
+                            <td>Regularization essential for generalization</td>
+                        </tr>
+                    </table>
+
+                    <h2>Professional Growth</h2>
+                    <p>This project transformed me from a ML consumer to a ML creator. Key developments:</p>
+                    <ul>
+                        <li><strong>Systematic Thinking:</strong> Learned to design controlled experiments</li>
+                        <li><strong>Critical Analysis:</strong> Question conventional wisdom, validate through data</li>
+                        <li><strong>Technical Communication:</strong> Created comprehensive presentation for technical audience</li>
+                        <li><strong>Problem Solving:</strong> Debugged models, optimized performance, handled failures</li>
+                    </ul>
+
+                    <h2>Comparison with Unit 6</h2>
+                    <p><strong>Unit 6:</strong> Visualized and interpreted existing model outputs<br>
+                    <strong>Unit 11:</strong> Built, trained, and evaluated models from scratch</p>
+                    <p>The progression from analysis to creation represents my growth from understanding ML concepts to implementing them.</p>
+
+                    <h2>Future Applications</h2>
+                    <ul>
+                        <li>Explore Vision Transformers for small image classification</li>
+                        <li>Implement explainability methods to understand model decisions</li>
+                        <li>Test self-supervised learning approaches</li>
+                        <li>Apply learnings to real-world computer vision problems</li>
+                    </ul>
+
+                    <h2>Key Takeaway</h2>
+                    <div style="background: #f0f0f0; padding: 20px; border-left: 4px solid #667eea; margin: 20px 0;">
+                        <p><strong>"The best way to understand deep learning is to implement it. Theory provides the foundation, but debugging a model at 2 AM teaches you what really matters: systematic experimentation, critical thinking, and perseverance."</strong></p>
+                    </div>
+
+                    <ul class="actions">
+                        <li><a href="../projects.html" class="button">Back to Projects</a></li>
+                        <li><a href="unit11-presentation.pdf" class="button primary">View Presentation</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.scrolly.min.js"></script>
+    <script src="../assets/js/jquery.scrollex.min.js"></script>
+    <script src="../assets/js/browser.min.js"></script>
+    <script src="../assets/js/breakpoints.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
