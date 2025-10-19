@@ -1,0 +1,246 @@
+<!-- projects/unit6/visualization-reflection.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit 6: Data Visualization Project - Reflection</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .reflection-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        .section {
+            background: #f8f9fa;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        .highlight-box {
+            background: #e8f4f8;
+            border: 1px solid #007acc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .metric {
+            display: inline-block;
+            background: white;
+            padding: 15px 20px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .code-learning {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .skill-tag {
+            background: #667eea;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="reflection-header">
+        <h1>Unit 6 Project Reflection</h1>
+        <h2 style="border: none; color: white;">Airbnb NYC Price Prediction - Executive Visualization Suite</h2>
+        <p><strong>My Role:</strong> Data Visualization & Executive Insights Lead (Step 6)</p>
+    </div>
+
+    <section class="section">
+        <h2>📊 Project Overview & My Contribution</h2>
+        <p>In this team project, I was responsible for transforming complex machine learning model outputs into executive-ready visualizations. My task was to make technical findings accessible and actionable for Airbnb's leadership team.</p>
+        
+        <div class="highlight-box">
+            <h4>Key Deliverables:</h4>
+            <ul>
+                <li>Interactive executive dashboard using Plotly</li>
+                <li>Model performance comparison visualizations</li>
+                <li>Feature importance analysis with business-friendly labels</li>
+                <li>Geographic pricing intelligence maps</li>
+                <li>Revenue opportunity matrix identifying $51M+ potential</li>
+            </ul>
+        </div>
+
+        <div class="metrics-container">
+            <div class="metric">
+                <strong>5</strong> ML Models<br>Visualized
+            </div>
+            <div class="metric">
+                <strong>$51M+</strong> Revenue<br>Opportunity Identified
+            </div>
+            <div class="metric">
+                <strong>62.3%</strong> Model<br>Accuracy Achieved
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>🎯 Technical Skills Developed</h2>
+        
+        <div class="skills-grid">
+            <div class="skill-tag">Python (Plotly)</div>
+            <div class="skill-tag">Data Visualization</div>
+            <div class="skill-tag">Pandas/NumPy</div>
+            <div class="skill-tag">Business Analytics</div>
+            <div class="skill-tag">Statistical Analysis</div>
+            <div class="skill-tag">Executive Reporting</div>
+        </div>
+
+        <h3>Key Technical Implementation:</h3>
+        <div class="code-learning">
+            <pre>
+# One of my key innovations: Translating technical features to business language
+def clean_feature_name(name):
+    """Convert ML feature names to executive-friendly labels"""
+    # Example: 'room_type_Private_room' → 'Room Type: Private Room'
+    # This bridged the gap between data science and business strategy
+            </pre>
+        </div>
+
+        <p>I learned to use Plotly's advanced features for creating interactive visualizations, including:</p>
+        <ul>
+            <li>Subplots for comparative analysis</li>
+            <li>Color scales to represent data intensity</li>
+            <li>Hover interactions for detailed insights</li>
+            <li>Professional styling for executive presentations</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>💡 Critical Analysis & Learning Outcomes</h2>
+        
+        <h3>What Went Well:</h3>
+        <ul>
+            <li><strong>Audience Adaptation:</strong> Successfully translated technical metrics (RMSLE, R²) into business language (prediction accuracy, revenue opportunity)</li>
+            <li><strong>Visual Hierarchy:</strong> Used color, size, and positioning to guide executive attention to key insights</li>
+            <li><strong>Actionable Insights:</strong> Quantified specific revenue opportunities ($35/night for Manhattan premium properties)</li>
+            <li><strong>Clean Code:</strong> Developed reusable functions for feature name cleaning and data transformation</li>
+        </ul>
+
+        <h3>Challenges Overcome:</h3>
+        <div class="highlight-box">
+            <p><strong>Challenge 1:</strong> Feature importance values didn't sum to 100%, making them confusing for executives</p>
+            <p><strong>Solution:</strong> Normalized the top 10 features to create percentage-based importance metrics</p>
+            <br>
+            <p><strong>Challenge 2:</strong> Technical feature names from the ML model were not interpretable</p>
+            <p><strong>Solution:</strong> Created a comprehensive cleaning function to translate all feature names</p>
+            <br>
+            <p><strong>Challenge 3:</strong> Static visualizations didn't engage the audience effectively</p>
+            <p><strong>Solution:</strong> Switched to Plotly for interactive, explorable visualizations</p>
+        </div>
+
+        <h3>Areas for Improvement:</h3>
+        <ul>
+            <li>Could have included time-series analysis for seasonal pricing patterns</li>
+            <li>Dashboard could benefit from real-time data integration</li>
+            <li>Additional user personas beyond executives (hosts, data scientists)</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>🚀 Professional Development Impact</h2>
+        
+        <h3>Key Competencies Gained:</h3>
+        <ol>
+            <li><strong>Business Communication:</strong> Learned to present technical findings in business context with clear ROI</li>
+            <li><strong>Data Storytelling:</strong> Developed narrative flow from problem → analysis → opportunity → action</li>
+            <li><strong>Stakeholder Management:</strong> Understood different audience needs (technical vs. executive)</li>
+            <li><strong>Strategic Thinking:</strong> Connected model outputs to business strategy and revenue opportunities</li>
+        </ol>
+
+        <div class="highlight-box">
+            <h4>Most Valuable Lesson:</h4>
+            <p>"The best model in the world is useless if stakeholders can't understand and act on its insights. Visualization is not just about making pretty charts – it's about driving decisions and creating value."</p>
+        </div>
+
+        <h3>How This Applies to My Career:</h3>
+        <p>This project has been pivotal in shaping my approach to data science and machine learning. I've learned that:</p>
+        <ul>
+            <li>Technical excellence must be paired with clear communication</li>
+            <li>Understanding the business context is as important as understanding the algorithm</li>
+            <li>Interactive visualizations dramatically increase stakeholder engagement</li>
+            <li>Quantifying business impact opens doors to strategic conversations</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>🤝 Team Collaboration Reflection</h2>
+        
+        <h3>My Role in the Team:</h3>
+        <p>As the visualization lead, I served as the bridge between our technical team members (who built the models) and the business stakeholders (who needed actionable insights). This required:</p>
+        <ul>
+            <li>Regular communication with model developers to understand outputs</li>
+            <li>Iterative feedback sessions to refine visualizations</li>
+            <li>Coordinating with team members to ensure consistent messaging</li>
+            <li>Taking initiative to research executive presentation best practices</li>
+        </ul>
+
+        <h3>Collaboration Successes:</h3>
+        <ul>
+            <li>Established clear handoff process from modeling team to visualization</li>
+            <li>Created shared documentation for feature definitions</li>
+            <li>Conducted peer reviews to ensure accuracy of visual representations</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>📈 Future Applications</h2>
+        
+        <p>Based on this experience, I plan to:</p>
+        <ol>
+            <li><strong>Expand Technical Skills:</strong> Learn D3.js for even more customized visualizations</li>
+            <li><strong>Deepen Business Acumen:</strong> Study more about pricing strategies and market analysis</li>
+            <li><strong>Build a Portfolio:</strong> Create a template library for common ML visualization patterns</li>
+            <li><strong>Share Knowledge:</strong> Write a blog post about translating ML outputs for business audiences</li>
+        </ol>
+
+        <div class="highlight-box">
+            <h4>Next Project Goals:</h4>
+            <p>For Unit 11, I aim to incorporate real-time data streams and create a fully automated dashboard that updates with new model predictions, building on the foundation established in this project.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>🔗 Project Artifacts</h2>
+        <ul>
+            <li><a href="visualization-code.py">Complete Python Visualization Code</a></li>
+            <li><a href="executive-presentation.pdf">Executive Presentation Slides</a></li>
+            <li><a href="team-notes.html">Team Meeting Notes</a></li>
+            <li><a href="peer-feedback.html">Peer Review Feedback</a></li>
+        </ul>
+    </section>
+
+    <div style="text-align: center; margin-top: 40px; padding: 20px; background: #f0f0f0; border-radius: 10px;">
+        <p><em>"This project transformed my understanding of what it means to be a data scientist – it's not just about building models, but about creating value through clear communication and strategic insight."</em></p>
+    </div>
+</body>
+</html>
