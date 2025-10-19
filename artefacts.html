@@ -224,6 +224,76 @@
     </div>
 </div>
 
+<!-- Unit 5 Part 2 -->
+<div class="unit-section">
+    <h2>📐 Unit 5: Similarity Measures - Jaccard Coefficient Exercise</h2>
+    <div class="unit-content">
+        <h3>Practical Exercise: Calculating Jaccard Coefficient for Medical Test Data</h3>
+        
+        <div class="topic-box">
+            <p class="topic-label">Activity Focus:</p>
+            <p>Computing similarity measures between patient pathological test results using Jaccard coefficient</p>
+        </div>
+        
+        <div class="analysis-section">
+            <h4>Dataset Analysis</h4>
+            <p>Working with pathological test results for three individuals (Jack, Mary, Jim) containing:</p>
+            <ul>
+                <li>Binary symptoms: Fever (Y/N), Cough (N/P)</li>
+                <li>Test results: Test-1 through Test-4 with values (P/N/A)</li>
+            </ul>
+        </div>
+        
+        <div class="analysis-section">
+            <h4>Jaccard Coefficient Calculations</h4>
+            <div class="highlight-box">
+                <p><strong>Jack-Mary:</strong> J = 0.4 (2 matches out of 5 non-absent comparisons)<br>
+                <strong>Jack-Jim:</strong> J = 0.5 (3 matches out of 6 comparisons)<br>
+                <strong>Jim-Mary:</strong> J = 0.167 (1 match out of 6 comparisons)</p>
+            </div>
+            <p class="skills-note">Methodology: Jaccard coefficient = |Intersection| / |Union|, treating 'A' (Absent) values as missing data excluded from calculations</p>
+        </div>
+        
+        <div class="outcomes-section">
+            <h4>Key Insights from Analysis</h4>
+            <ul class="styled-list">
+                <li>Jack and Jim show highest similarity (0.5) - both males with fever</li>
+                <li>Jim and Mary show lowest similarity (0.167) despite both having fever</li>
+                <li>Missing data ('A' values) significantly impacts similarity calculations</li>
+                <li>Binary and categorical medical data requires careful handling in ML algorithms</li>
+                <li>Jaccard coefficient effective for sparse, categorical medical datasets</li>
+            </ul>
+        </div>
+        
+        <div class="analysis-section">
+            <h4>Professional Implications</h4>
+            <div class="highlight-box">
+                <p>"This exercise demonstrates critical considerations for medical ML applications: handling missing data, choosing appropriate similarity metrics for categorical variables, and understanding how data representation affects patient clustering and diagnosis algorithms."</p>
+            </div>
+        </div>
+        
+        <div class="outcomes-section">
+            <h4>Learning Outcomes Achieved</h4>
+            <ul class="styled-list">
+                <li>Articulated legal, social, and ethical issues in medical ML applications</li>
+                <li>Understood challenges of different datasets for ML algorithms</li>
+                <li>Applied appropriate similarity measures for categorical data</li>
+                <li>Recognized importance of missing data handling in healthcare ML</li>
+            </ul>
+        </div>
+        
+        <div class="metadata-row">
+            <span class="meta-item"><strong>Skills Applied:</strong> Similarity measures, categorical data analysis, missing data handling</span>
+            <span class="meta-item"><strong>Professional Issues:</strong> Medical data privacy, algorithmic fairness in healthcare</span>
+        </div>
+        
+        <div class="evidence-links">
+            <a href="evidence/unit5-jaccard-calculations.pdf" class="evidence-btn">Calculation Work</a>
+            <a href="evidence/unit5-similarity-analysis.pdf" class="evidence-btn">Analysis Notes</a>
+        </div>
+    </div>
+</div>
+
 <style>
 .unit-section {
     background: #f8f9fa;
