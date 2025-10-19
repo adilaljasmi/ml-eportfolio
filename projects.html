@@ -78,10 +78,66 @@
                     </ul>
 
                     <!-- Unit 11 Project -->
-                    <hr class="major" />
-                    <h2>Unit 11: [Coming Soon]</h2>
-                    <p><em>Unit 11 project details will be added upon completion...</em></p>
+<hr class="major" />
+<h2>Unit 11: Deep Learning for CIFAR-10 Object Recognition</h2>
+<span class="image main"><img src="images/cifar10-banner.jpg" alt="" /></span>
 
+<h3>Project Overview</h3>
+<p><strong>Type:</strong> Individual Project</p>
+<p><strong>Objective:</strong> Design and implement CNN architectures for image classification on CIFAR-10 dataset</p>
+<p><strong>Technologies:</strong> Python, TensorFlow/Keras, Google Colab, NumPy, Matplotlib, Plotly</p>
+
+<h3>Key Achievements</h3>
+<div class="row">
+    <div class="col-6 col-12-small">
+        <ul>
+            <li>Achieved <strong>88.34%</strong> test accuracy with custom CNN</li>
+            <li>Outperformed transfer learning (EfficientNetB0) by <strong>31%</strong></li>
+            <li>Tested 9 hyperparameter configurations</li>
+            <li>Analyzed 4 different CNN architectures</li>
+        </ul>
+    </div>
+    <div class="col-6 col-12-small">
+        <ul>
+            <li>Discovered augmentation harmful for 32x32 images</li>
+            <li>Achieved 99.58% top-5 accuracy</li>
+            <li>Training time: 14 minutes on T4 GPU</li>
+            <li>Model size: 1.47M parameters (optimal)</li>
+        </ul>
+    </div>
+</div>
+
+<h3>Technical Deep Dive</h3>
+<h4>Models Compared:</h4>
+<ul>
+    <li><strong>Custom CNN:</strong> 88.34% accuracy - Best performer</li>
+    <li><strong>Transfer Learning (EfficientNetB0):</strong> 56.96% accuracy - Failed due to resolution mismatch</li>
+    <li><strong>Architecture Variations:</strong> Deep, Wide, Shallow, Residual-like</li>
+</ul>
+
+<h4>Key Findings:</h4>
+<ul>
+    <li>Deep architecture (1.47M params) optimal vs Wide (8.84M params)</li>
+    <li>Data augmentation decreased performance by up to 52%</li>
+    <li>Best configuration: Adam optimizer, LR=0.001, Dropout=0.5</li>
+    <li>Model excels at vehicles (94%+ accuracy) but struggles with cats/dogs (72-75%)</li>
+</ul>
+
+<h3>Critical Insights</h3>
+<p>This project revealed crucial lessons about deep learning:</p>
+<ul>
+    <li><strong>Resolution Matters:</strong> 32×32 images too small for standard augmentation techniques</li>
+    <li><strong>Architecture > Parameters:</strong> More parameters doesn't mean better performance</li>
+    <li><strong>Transfer Learning Limitations:</strong> Pre-trained models fail when domain mismatch is severe</li>
+    <li><strong>Confidence Calibration:</strong> Custom CNN showed 99% confidence when correct vs 72% when incorrect</li>
+</ul>
+
+<ul class="actions">
+    <li><a href="projects/unit11-reflection.html" class="button primary large">View Detailed Analysis</a></li>
+    <li><a href="projects/unit11-presentation.pdf" class="button">Download Presentation</a></li>
+    <li><a href="https://colab.research.google.com/drive/your-notebook-id" class="button">View Code on Colab</a></li>
+</ul>
+                    
                 </div>
             </section>
         </div>
