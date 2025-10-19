@@ -227,17 +227,85 @@ def clean_feature_name(name):
             <h4>Next Project Goals:</h4>
             <p>For Unit 11, I aim to incorporate real-time data streams and create a fully automated dashboard that updates with new model predictions, building on the foundation established in this project.</p>
         </div>
-    </section>
+<section class="section">
+    <h2>🔗 Project Source Code</h2>
+    <p>Below is the complete Python code for the executive visualization suite:</p>
+    
+    <div style="margin: 20px 0;">
+        <button onclick="toggleCode()" style="background: #667eea; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+            View/Hide Python Code
+        </button>
+        <button onclick="copyCode()" style="background: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-left: 10px;">
+            Copy Code
+        </button>
+    </div>
+    
+    <pre id="codeBlock" style="display: none; background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 5px; overflow-x: auto; max-height: 600px; overflow-y: auto;">
+<code class="language-python">import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import plotly.graph_objects as go
+import plotly.express as px
+from plotly.subplots import make_subplots
+import warnings
+warnings.filterwarnings('ignore')
 
-    <section class="section">
-        <h2>🔗 Project Artifacts</h2>
-        <ul>
-            <li><a href="visualization-code.py">Complete Python Visualization Code</a></li>
-            <li><a href="executive-presentation.pdf">Executive Presentation Slides</a></li>
-            <li><a href="team-notes.html">Team Meeting Notes</a></li>
-            <li><a href="peer-feedback.html">Peer Review Feedback</a></li>
-        </ul>
-    </section>
+# Set style for better-looking plots
+plt.style.use('seaborn-v0_8-darkgrid')
+sns.set_palette("husl")
+
+# ========================================
+# Executive Summary Dashboard
+# ========================================
+
+print("="*80)
+print("Airbnb NYC Price Prediction Model - Executive Presentation")
+print("="*80)
+
+# Create performance metrics dataframe
+performance_data = {
+    'Model': ['Linear Regression\n(Baseline)', 'XGBoost\n(Untuned)', 'XGBoost\n(Tuned)',
+              'Random Forest\n(Untuned)', 'Random Forest\n(Tuned)'],
+    'RMSLE': [0.4598, 0.4263, 0.4222, 0.4289, 0.4275],
+    'R2_Score': [0.5530, 0.6158, 0.6231, 0.6112, 0.6137],
+    'Variance_Explained': [55.30, 61.58, 62.31, 61.12, 61.37]  # R2 as percentage
+}
+
+# Calculate improvements
+baseline_r2 = 0.5530
+best_r2 = 0.6231
+improvement = ((best_r2 - baseline_r2) / baseline_r2) * 100
+
+print(f"\nKey Achievement: XGBoost model explains {best_r2:.1%} of price variance vs {baseline_r2:.1%} for baseline")
+print(f"Best Model: Tuned XGBoost (R² = 0.623, RMSLE = 0.422)")
+print(f"Business Impact: Model provides reliable pricing guidance for most listings")
+
+# [REST OF YOUR CODE CONTINUES...]
+# Note: Full code is truncated here for space, but include ALL your code
+</code>
+    </pre>
+    
+    <script>
+    function toggleCode() {
+        var codeBlock = document.getElementById("codeBlock");
+        if (codeBlock.style.display === "none") {
+            codeBlock.style.display = "block";
+        } else {
+            codeBlock.style.display = "none";
+        }
+    }
+    
+    function copyCode() {
+        var codeText = document.getElementById("codeBlock").innerText;
+        navigator.clipboard.writeText(codeText).then(function() {
+            alert("Code copied to clipboard!");
+        }, function(err) {
+            console.error('Could not copy text: ', err);
+        });
+    }
+    </script>
+</section>
 
     <div style="text-align: center; margin-top: 40px; padding: 20px; background: #f0f0f0; border-radius: 10px;">
         <p><em>"This project transformed my understanding of what it means to be a data scientist – it's not just about building models, but about creating value through clear communication and strategic insight."</em></p>
