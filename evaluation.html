@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Evaluation - Unit 6 & Unit 11</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap');
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #667eea;
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            font-weight: 900;
+        }
+        
+        .subtitle {
+            font-family: 'Inter', sans-serif;
+            color: #666;
+            font-size: 1.2em;
+            font-style: italic;
+            font-weight: 400;
+        }
+        
+        .project-section {
+            margin-bottom: 60px;
+            padding: 40px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 6px solid #667eea;
+        }
+        
+        .project-section.unit11 {
+            border-left-color: #764ba2;
+        }
+        
+        .project-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+        }
+        
+        .project-badge {
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-right: 20px;
+            font-size: 0.9em;
+        }
+        
+        .unit11 .project-badge {
+            background: #764ba2;
+        }
+        
+        .project-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #333;
+            font-size: 2em;
+            font-weight: 700;
+        }
+        
+        h2 {
+            font-family: 'Inter', sans-serif;
+            color: #667eea;
+            font-size: 1.8em;
+            margin-top: 35px;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 5px solid #667eea;
+            font-weight: 700;
+        }
+        
+        .unit11 h2 {
+            color: #764ba2;
+            border-left-color: #764ba2;
+        }
+        
+        h3 {
+            font-family: 'Inter', sans-serif;
+            color: #555;
+            font-size: 1.4em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        p {
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 20px;
+            text-align: justify;
+            font-weight: 400;
+            line-height: 1.9;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .metric-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-top: 4px solid #667eea;
+        }
+        
+        .unit11 .metric-card {
+            border-top-color: #764ba2;
+        }
+        
+        .metric-label {
+            color: #888;
+            font-size: 0.9em;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .metric-value {
+            color: #333;
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+        
+        .highlight-box {
+            background: #fff9e6;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+        
+        .insight-box {
+            background: #e8f5e9;
+            border-left: 5px solid #4caf50;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+        
+        .challenge-box {
+            background: #ffebee;
+            border-left: 5px solid #f44336;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+        
+        ul, ol {
+            margin: 20px 0 20px 40px;
+        }
+        
+        li {
+            margin-bottom: 12px;
+        }
+        
+        strong {
+            color: #667eea;
+        }
+        
+        .unit11 strong {
+            color: #764ba2;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        th {
+            background: #667eea;
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+        
+        .unit11 th {
+            background: #764ba2;
+        }
+        
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        tr:hover {
+            background: #f5f5f5;
+        }
+        
+        .comparison-section {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            padding: 40px;
+            border-radius: 10px;
+            margin: 50px 0;
+        }
+        
+        .comparison-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            text-align: center;
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .project-title {
+                font-size: 1.5em;
+            }
+            
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Projects Evaluation</h1>
+            <p class="subtitle">Comprehensive Analysis of Unit 6 & Unit 11 Machine Learning Projects</p>
+        </div>
+
+        <!-- UNIT 6 PROJECT -->
+        <div class="project-section">
+            <div class="project-header">
+                <span class="project-badge">UNIT 6 - COLLABORATIVE</span>
+                <h1 class="project-title">Airbnb NYC Price Prediction</h1>
+            </div>
+
+            <h2>Project Overview</h2>
+            <p>The Unit 6 project focused on developing a machine learning solution to predict Airbnb listing prices in New York City, providing actionable insights for both hosts and the platform. As the <strong>Data Visualization and Executive Insights Lead</strong>, I was responsible for translating complex model outputs into compelling visualizations tailored for executive decision-making.</p>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-label">Dataset Size</div>
+                    <div class="metric-value">48,895</div>
+                    <p style="margin-top: 10px; font-size: 0.9em;">NYC Airbnb listings</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Features Analyzed</div>
+                    <div class="metric-value">16</div>
+                    <p style="margin-top: 10px; font-size: 0.9em;">Including location, reviews, availability</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Best Model</div>
+                    <div class="metric-value">XGBoost</div>
+                    <p style="margin-top: 10px; font-size: 0.9em;">Tuned Random Forest close second</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Team Role</div>
+                    <div class="metric-value">Step 6</div>
+                    <p style="margin-top: 10px; font-size: 0.9em;">Visualization & Interpretation Lead</p>
+                </div>
+            </div>
+
+            <h2>Technical Implementation</h2>
+            
+            <h3>My Specific Contributions</h3>
+            <p>My responsibilities encompassed the critical final stage of the data science pipeline: communicating insights effectively to non-technical stakeholders. This involved:</p>
+            
+            <ul>
+                <li><strong>Executive Dashboard Development:</strong> Created an interactive dashboard using Python (Plotly, Matplotlib, Seaborn) that presented model performance comparisons, feature importance rankings, and prediction accuracy visualizations in an executive-friendly format.</li>
+                <li><strong>Feature Translation System:</strong> Developed a systematic approach to convert technical variable names into business language, making insights accessible to executive stakeholders without data science backgrounds.</li>
+                <li><strong>Narrative Construction:</strong> Crafted data-driven narratives that connected technical findings to business implications, transforming raw model outputs into strategic recommendations.</li>
+                <li><strong>Comparative Analysis Visualization:</strong> Designed visual comparisons of three models (Linear Regression, XGBoost, Random Forest) showing performance trade-offs through scatter plots, residual plots, and metrics tables.</li>
+            </ul>
+
+            <h3>Models Evaluated</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Model</th>
+                        <th>R² Score</th>
+                        <th>MAE</th>
+                        <th>Key Strength</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Tuned XGBoost</strong></td>
+                        <td>0.587</td>
+                        <td>$32.18</td>
+                        <td>Best overall performance with gradient boosting</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tuned Random Forest</strong></td>
+                        <td>0.582</td>
+                        <td>$32.64</td>
+                        <td>Similar performance, more interpretable</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Linear Regression</strong></td>
+                        <td>0.492</td>
+                        <td>$37.25</td>
+                        <td>Baseline model, fastest training</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Key Findings & Insights</h2>
+            
+            <div class="insight-box">
+                <h3>🎯 Top Price Drivers Identified</h3>
+                <ol>
+                    <li><strong>Room Type:</strong> Entire homes/apartments commanded premium prices over private or shared rooms</li>
+                    <li><strong>Location (Borough):</strong> Manhattan listings averaged significantly higher prices than other boroughs</li>
+                    <li><strong>Minimum Nights:</strong> Listings with flexible minimum stay requirements showed different pricing patterns</li>
+                    <li><strong>Availability:</strong> Year-round available properties exhibited distinct pricing strategies</li>
+                    <li><strong>Host Listings Count:</strong> Professional hosts with multiple listings employed different pricing approaches</li>
+                </ol>
+            </div>
+
+            <div class="highlight-box">
+                <h3>💡 Executive-Level Recommendations Delivered</h3>
+                <ul>
+                    <li><strong>Dynamic Pricing Strategy:</strong> Hosts should adjust prices based on location, room type, and seasonal availability patterns identified by the model</li>
+                    <li><strong>Market Positioning:</strong> Manhattan entire-home listings have highest revenue potential but also highest competition</li>
+                    <li><strong>Optimization Opportunities:</strong> Listings with suboptimal pricing (>$30 deviation from predictions) represent immediate revenue improvement opportunities</li>
+                    <li><strong>Feature Enhancement Focus:</strong> Review frequency correlates with demand; encouraging guest reviews can improve visibility and pricing power</li>
+                </ul>
+            </div>
+
+            <h2>Challenges Encountered & Solutions</h2>
+            
+            <div class="challenge-box">
+                <h3>Challenge 1: Bridging Technical-Executive Communication Gap</h3>
+                <p><strong>Problem:</strong> Model outputs contained technical jargon (e.g., "calculated_host_listings_count", "reviews_per_month") that would confuse executive audiences.</p>
+                <p><strong>Solution:</strong> Created a feature translation dictionary that mapped technical terms to business concepts. For example, "availability_365" became "Year-round Availability Status" with contextual explanations of its business significance.</p>
+            </div>
+
+            <div class="challenge-box">
+                <h3>Challenge 2: Visualizing High-Dimensional Feature Importance</h3>
+                <p><strong>Problem:</strong> Presenting 16 features' importance without overwhelming the audience while maintaining accuracy.</p>
+                <p><strong>Solution:</strong> Implemented a tiered visualization approach: (1) Top 5 features in primary dashboard, (2) Complete feature breakdown in appendix, (3) Interactive filters allowing executives to explore specific segments.</p>
+            </div>
+
+            <div class="challenge-box">
+                <h3>Challenge 3: Handling Outliers in Price Predictions</h3>
+                <p><strong>Problem:</strong> Extreme luxury listings (>$1000/night) skewed visualizations and could mislead interpretation.</p>
+                <p><strong>Solution:</strong> Created dual visualizations: (1) Full dataset view with log scale for comprehensiveness, (2) 99th percentile trimmed view for clarity. Documented methodology transparently in presentation notes.</p>
+            </div>
+
+            <h2>Skills Developed</h2>
+            <ul>
+                <li><strong>Advanced Data Visualization:</strong> Mastered Plotly for interactive dashboards, learned effective color theory for data representation, developed skills in designing for multiple audience types</li>
+                <li><strong>Stakeholder Communication:</strong> Enhanced ability to translate technical concepts into business language, practiced empathy-driven design for non-technical audiences</li>
+                <li><strong>Collaborative Workflow:</strong> Coordinated with teammates responsible for EDA, preprocessing, and modeling to ensure visualization requirements were met during earlier pipeline stages</li>
+                <li><strong>Business Acumen:</strong> Deepened understanding of how ML insights drive strategic decisions in the hospitality industry</li>
+            </ul>
+
+            <h2>Reflections on Team Collaboration</h2>
+            <p>Working as part of a distributed team taught me the importance of clear communication and documentation. My role depended entirely on the quality of inputs from teammates (Phunmi's EDA and Jordan's modeling), which emphasized the interconnected nature of data science projects. Regular check-ins and shared documentation were crucial for ensuring my visualizations accurately represented the team's collective findings.</p>
+            
+            <p>The experience highlighted that effective data visualization is not just about technical execution but about understanding the entire project context—from business questions through data preparation to model selection. This holistic perspective proved invaluable when making design decisions about what to emphasize in executive presentations.</p>
+        </div>
+
+        <!-- UNIT 11 PROJECT -->
+        <div class="project-section unit11">
+            <div class="project-header">
+                <span class="project-badge">UNIT 11 - INDIVIDUAL</span>
+                <h1 class="project-title">CIFAR-10 Deep Learning Classification</h1>
+            </div>
+
+            <h2>Project Overview</h2>
+            <p>The Unit 11 individual project challenged me to implement deep learning from scratch for image classification on the CIFAR-10 dataset. Unlike the collaborative Unit 6 project, this required ownership of the entire machine learning pipeline—from architecture design through experimentation to final evaluation. The project explored CNNs versus transfer learning, providing hands-on experience with the trade-offs between custom and pre-trained approaches.</p>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-label">Best Accuracy</div>
+                    <div class="metric-value">88.34%</div>
+                    <p style="margin-top: 10px; font-size: 0.9em;">Custom CNN on CIFAR-10 test set</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Architectures Tested</div>
+                    <div class="metric-value">4</div>
+                    <p style="margin-top: 10px; font-size: 0.9em;">Shallow, Deep, Wide, Residual-like</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Hyperparameter Configs</div>
+                    <div class="metric-value">9</div>
+                    <p style="margin-top: 10px; font-size: 0.9em;">Systematic tuning experiments</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Training Time</div>
+                    <div class="metric-value">14 min</div>
+                    <p style="margin-top: 10px; font-size: 0.9em;">T4 GPU for 50 epochs</p>
+                </div>
+            </div>
+
+            <h2>Technical Implementation</h2>
+            
+            <h3>Custom CNN Architecture (Best Performer)</h3>
+            <p>I designed a custom CNN with progressive feature extraction, achieving the optimal balance between depth and computational efficiency:</p>
+            
+            <ul>
+                <li><strong>Architecture Design:</strong> Three convolutional blocks with increasing filter counts (64→128→256), each followed by batch normalization, ReLU activation, max pooling, and dropout</li>
+                <li><strong>Regularization Strategy:</strong> Combined batch normalization (2× faster convergence), dropout at 0.25 and 0.5 rates (71% overfitting reduction), and L2 weight decay (1e-4)</li>
+                <li><strong>Dense Layers:</strong> Two fully connected layers (512→256) before final 10-class softmax output</li>
+                <li><strong>Total Parameters:</strong> 1.47M for the deep architecture (optimal configuration)</li>
+            </ul>
+
+            <h3>Comprehensive Experimentation</h3>
+            <p>The project's strength lay in systematic experimentation across multiple dimensions:</p>
+
+            <h4>1. Architecture Variations</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Architecture</th>
+                        <th>Parameters</th>
+                        <th>Test Accuracy</th>
+                        <th>Training Time</th>
+                        <th>Key Insight</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Deep</strong></td>
+                        <td>1.47M</td>
+                        <td>87.71%</td>
+                        <td>76.4s</td>
+                        <td>Best accuracy, optimal depth</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Wide</strong></td>
+                        <td>8.84M</td>
+                        <td>87.64%</td>
+                        <td>158.9s</td>
+                        <td>6× more parameters, no gain</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Shallow</strong></td>
+                        <td>167K</td>
+                        <td>86.79%</td>
+                        <td>25.8s</td>
+                        <td>Fastest but less accurate</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Residual-like</strong></td>
+                        <td>2.37M</td>
+                        <td>87.15%</td>
+                        <td>97.8s</td>
+                        <td>Skip connections underutilized</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4>2. Hyperparameter Tuning (9 Configurations)</h4>
+            <ul>
+                <li><strong>Learning Rate:</strong> Tested 0.0001, 0.001, 0.01 → Optimal: 0.001 (77.1% accuracy)</li>
+                <li><strong>Dropout Rate:</strong> Tested 0.0, 0.5, 0.7 → Optimal: 0.5 (balanced regularization)</li>
+                <li><strong>Batch Size:</strong> Tested 32, 64, 128 → Optimal: 128 (speed/accuracy balance)</li>
+                <li><strong>Optimizer:</strong> Tested Adam, SGD, RMSprop → Winner: Adam (adaptive learning)</li>
+                <li><strong>Performance Range:</strong> 10% accuracy variation across configurations demonstrated tuning's critical importance</li>
+            </ul>
+
+            <h4>3. Data Augmentation Experiments (5 Strategies)</h4>
+            <div class="highlight-box">
+                <h3>🔬 Counterintuitive Discovery: Augmentation Harmful for CIFAR-10</h3>
+                <ul>
+                    <li><strong>No Augmentation:</strong> 86.23% accuracy (BASELINE - BEST)</li>
+                    <li><strong>Basic Augmentation:</strong> 61.93% accuracy (-24.3% drop)</li>
+                    <li><strong>Moderate Augmentation:</strong> 55.09% accuracy (-31.1% drop)</li>
+                    <li><strong>Heavy Augmentation:</strong> 34.28% accuracy (-52% drop, catastrophic)</li>
+                    <li><strong>Extreme Augmentation:</strong> 36.06% accuracy (-50% drop)</li>
+                </ul>
+                <p><strong>Critical Insight:</strong> Standard augmentation techniques (rotation, flipping, cropping) designed for larger images (224×224) are detrimental to CIFAR-10's tiny 32×32 resolution. This contradicts conventional wisdom in the literature (Shorten & Khoshgoftaar, 2019) and demonstrates the importance of empirical validation over theoretical assumptions.</p>
+            </div>
+
+            <h4>4. Transfer Learning Attempt</h4>
+            <div class="challenge-box">
+                <h3>Transfer Learning Failure: A Valuable Lesson</h3>
+                <p><strong>Approach:</strong> Fine-tuned EfficientNetB0 pre-trained on ImageNet (1.28M images, 224×224 resolution)</p>
+                <p><strong>Result:</strong> 56.96% accuracy—31.38% worse than custom CNN</p>
+                <p><strong>Root Cause:</strong> Severe domain mismatch. ImageNet models expect high-resolution images (224×224), but CIFAR-10 provides only 32×32. The pre-trained feature extractors, optimized for large-scale features, couldn't adapt to CIFAR-10's low-resolution constraints.</p>
+                <p><strong>Lesson Learned:</strong> Transfer learning is not universally beneficial. Architecture-data compatibility is paramount. For small images, custom-designed CNNs outperform adapted pre-trained models.</p>
+            </div>
+
+            <h2>Key Findings & Insights</h2>
+            
+            <div class="insight-box">
+                <h3>🎯 Critical Discoveries</h3>
+                <ol>
+                    <li><strong>Depth > Width:</strong> The deep architecture with 1.47M parameters outperformed the wide architecture with 8.84M parameters, confirming that depth (hierarchical feature learning) matters more than width for image classification.</li>
+                    <li><strong>Resolution Matters Critically:</strong> 32×32 images are too small for standard augmentation techniques. This finding challenges conventional practices and highlights the need for resolution-aware preprocessing.</li>
+                    <li><strong>Transfer Learning Isn't Universal:</strong> Pre-trained models fail when domain mismatch is severe. Custom architectures designed for the specific data characteristics outperform adapted pre-trained models.</li>
+                    <li><strong>Confidence Calibration:</strong> The custom CNN showed excellent prediction confidence (99% when correct vs 72% when incorrect), enabling production deployment with confidence thresholding.</li>
+                    <li><strong>Class-Specific Performance:</strong> Models excelled at vehicles (automobiles 96.6%, trucks 95.1%) but struggled with animals (cats 71.6%, dogs 74.9%), likely due to higher intra-class variation in animal poses and appearances.</li>
+                </ol>
+            </div>
+
+            <h2>Challenges Encountered & Solutions</h2>
+            
+            <div class="challenge-box">
+                <h3>Challenge 1: Late-Night Debugging Sessions</h3>
+                <p><strong>Problem:</strong> Model training stalled at ~10% accuracy due to vanishing gradients in initial architecture attempts.</p>
+                <p><strong>Solution:</strong> Diagnosed through gradient monitoring, resolved by implementing batch normalization after each convolutional layer and adjusting initialization scheme to He initialization. Learned to use TensorBoard for real-time training diagnostics.</p>
+                <p><strong>Time Investment:</strong> 3+ hours of debugging at 2 AM, but the systematic problem-solving approach became a valuable skill.</p>
+            </div>
+
+            <div class="challenge-box">
+                <h3>Challenge 2: Hyperparameter Search Explosion</h3>
+                <p><strong>Problem:</strong> With 4 hyperparameters and multiple values each, exhaustive search would require 81+ experiments (intractable given time/compute constraints).</p>
+                <p><strong>Solution:</strong> Implemented strategic grid search focusing on most impactful hyperparameters first (learning rate, dropout), then refined promising configurations. Reduced to 9 focused experiments while maintaining comprehensive coverage.</p>
+            </div>
+
+            <div class="challenge-box">
+                <h3>Challenge 3: Understanding Augmentation Failure</h3>
+                <p><strong>Problem:</strong> Initial assumption was that more augmentation would reduce overfitting and improve generalization, but results showed the opposite.</p>
+                <p><strong>Solution:</strong> Deep analysis revealed that aggressive transformations (rotations, crops) on 32×32 images removed critical identifying features. Created visualization of augmented samples to understand degradation. This empirical finding challenged my theoretical understanding and taught the importance of validating assumptions.</p>
+            </div>
+
+            <h2>Skills Developed</h2>
+            <ul>
+                <li><strong>Deep Learning Implementation:</strong> Gained hands-on experience building CNNs from scratch using TensorFlow/Keras, understanding layer-by-layer architecture decisions</li>
+                <li><strong>Systematic Experimentation:</strong> Developed rigorous methodology for comparing architectures, tuning hyperparameters, and documenting findings</li>
+                <li><strong>Critical Analysis:</strong> Learned to question conventional wisdom (e.g., augmentation benefits) and validate through empirical evidence</li>
+                <li><strong>Debugging Complex Systems:</strong> Enhanced ability to diagnose and resolve training issues in neural networks through gradient analysis and visualization</li>
+                <li><strong>Research Communication:</strong> Practiced presenting technical findings to academic audiences through comprehensive documentation and visualization</li>
+                <li><strong>Self-Reliance:</strong> Working individually required making architectural decisions without team validation, building confidence in independent judgment</li>
+            </ul>
+
+            <h2>Individual Work vs. Team Collaboration</h2>
+            <p>The transition from collaborative (Unit 6) to individual work (Unit 11) revealed valuable insights about autonomy and accountability. Without teammates to validate choices, I developed stronger confidence in my judgment while maintaining the critical evaluation practices learned from peer discussions. Every failed experiment was mine to debug, and every success was mine to build upon—this complete ownership drove deeper engagement with the material.</p>
+            
+            <p>The isolation of individual work, particularly during late-night debugging sessions, paradoxically strengthened my appreciation for collaborative learning environments while proving I could succeed independently. The systematic experimentation approach—testing nine hyperparameter configurations and four architectures—reflected methodologies I had observed and discussed with peers in earlier units, demonstrating how team experiences create a mental repository of strategies that enhance subsequent individual work.</p>
+
+            <h2>Production Deployment Considerations</h2>
+            <div class="insight-box">
+                <h3>📊 Practical Recommendations for CIFAR-10 Deployment</h3>
+                <ul>
+                    <li><strong>Architecture:</strong> Use custom CNN with 1-2M parameters (deep architecture), avoid pre-trained models for small images</li>
+                    <li><strong>Preprocessing:</strong> Skip data augmentation for 32×32 images; standard normalization sufficient</li>
+                    <li><strong>Regularization:</strong> Apply moderate dropout (0.5) and batch normalization; avoid over-regularization</li>
+                    <li><strong>Confidence Thresholding:</strong> Implement 80% confidence threshold to maintain 95%+ precision on accepted predictions</li>
+                    <li><strong>Class-Specific Handling:</strong> Consider ensemble approaches for cat/dog classification where single model struggles</li>
+                    <li><strong>Compute Requirements:</strong> T4 GPU sufficient for training (14 minutes); model size (2.3MB) enables edge deployment</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- COMPARATIVE ANALYSIS -->
+        <div class="comparison-section">
+            <h2 class="comparison-title">Comparative Reflection: Unit 6 vs. Unit 11</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dimension</th>
+                        <th>Unit 6 - Airbnb (Collaborative)</th>
+                        <th>Unit 11 - CIFAR-10 (Individual)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Work Style</strong></td>
+                        <td>Team-based, specialized role (Step 6)</td>
+                        <td>End-to-end individual ownership</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Primary Focus</strong></td>
+                        <td>Communication & visualization</td>
+                        <td>Technical implementation & experimentation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Key Challenge</strong></td>
+                        <td>Bridging technical-executive gap</td>
+                        <td>Systematic debugging & validation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Learning Emphasis</strong></td>
+                        <td>Stakeholder empathy, business translation</td>
+                        <td>Deep learning fundamentals, self-reliance</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Decision-Making</strong></td>
+                        <td>Coordinated with team dependencies</td>
+                        <td>Autonomous with full accountability</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Skill Development</strong></td>
+                        <td>Data storytelling, collaboration</td>
+                        <td>Neural network architecture, experimentation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Time Investment</strong></td>
+                        <td>Structured around team milestones</td>
+                        <td>Self-directed, including late-night debugging</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Output Type</strong></td>
+                        <td>Executive dashboard & recommendations</td>
+                        <td>Research-style technical analysis</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="insight-box" style="margin-top: 30px;">
+                <h3>🔗 Synergies Between Projects</h3>
+                <p>While superficially different, these projects complemented each other powerfully. Unit 6 taught me to think about the "so what?"—how technical work creates business value. This perspective informed how I documented Unit 11's findings, ensuring my technical analysis connected to practical deployment considerations.</p>
+                
+                <p>Conversely, Unit 11's deep dive into model internals enhanced my appreciation for the complexity that Unit 6's visualizations abstracted away. Understanding gradient descent, backpropagation, and architecture choices made me a more informed communicator when presenting model insights to stakeholders.</p>
+                
+                <p>The combination of collaborative communication skills (Unit 6) and technical deep learning expertise (Unit 11) positions me uniquely as a machine learning practitioner who can both build models and explain their implications to diverse audiences—a crucial skill gap in the industry.</p>
+            </div>
+        </div>
+
+        <!-- OVERALL REFLECTION -->
+        <div style="background: #f8f9fa; padding: 40px; border-radius: 10px; margin-top: 50px;">
+            <h2 style="text-align: center; color: #333; border: none; padding: 0;">Overall Professional Growth</h2>
+            
+            <p>These two projects represent a comprehensive machine learning journey from different vantage points. Unit 6 emphasized the "last mile" of ML—communicating insights to drive decisions. Unit 11 provided the technical foundation—understanding how models actually learn and the trade-offs inherent in different approaches.</p>
+
+            <h3>Key Takeaways Across Both Projects</h3>
+            <ol>
+                <li><strong>Empirical Validation Over Theory:</strong> Both projects taught me to question assumptions. In Unit 6, real-world data rarely conformed to algorithmic assumptions. In Unit 11, conventional augmentation wisdom failed for small images. The lesson: always validate empirically.</li>
+                
+                <li><strong>Context Matters:</strong> There are no universal solutions. XGBoost's superiority in Unit 6 (structured tabular data) contrasted with custom CNN's necessity in Unit 11 (images). Transfer learning's failure emphasized that architectural choices must match data characteristics.</li>
+                
+                <li><strong>Communication is Inseparable from Technical Work:</strong> Unit 6 made this explicit, but Unit 11 reinforced it—even individual technical work requires clear documentation and presentation for findings to have impact.</li>
+                
+                <li><strong>Systematic Experimentation is Essential:</strong> Both projects benefited from structured approaches. Unit 6's model comparison and Unit 11's hyperparameter tuning demonstrated that rigorous methodology produces more reliable insights than ad-hoc exploration.</li>
+                
+                <li><strong>Failure Teaches More Than Success:</strong> Unit 11's augmentation failure and transfer learning disappointment were more educational than the successful custom CNN. These setbacks forced deeper understanding of underlying principles.</li>
+            </ol>
+
+            <h3>Future Directions</h3>
+            <p>These projects have prepared me for real-world ML practice where technical challenges and communication needs intertwine. Moving forward, I aim to:</p>
+            <ul>
+                <li>Explore modern architectures (Vision Transformers, ConvNeXt) for small image classification</li>
+                <li>Develop automated visualization pipelines that adapt to different model types and stakeholder needs</li>
+                <li>Investigate explainability methods (SHAP, LIME) to make both tabular and image models more interpretable</li>
+                <li>Apply lessons from both projects to production ML systems in industry settings</li>
+            </ul>
+
+            <p style="margin-top: 30px; font-style: italic; text-align: center; color: #666;">This evaluation demonstrates not just technical competency, but the critical thinking, adaptability, and communication skills essential for responsible AI development in an evolving landscape.</p>
+        </div>
+    </div>
+</body>
+</html>
