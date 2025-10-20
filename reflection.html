@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Critical Reflection: My Machine Learning Journey</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
+        }
+        
+        h2 {
+            color: #764ba2;
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 5px solid #764ba2;
+        }
+        
+        h3 {
+            color: #555;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        .intro {
+            font-style: italic;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+            margin-bottom: 30px;
+        }
+        
+        .conclusion {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 5px;
+            margin-top: 40px;
+            border-left: 4px solid #764ba2;
+        }
+        
+        .references {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #ddd;
+        }
+        
+        .references h2 {
+            border-left: none;
+            padding-left: 0;
+        }
+        
+        .reference-item {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            text-indent: -30px;
+            font-size: 0.95em;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Critical Reflection: My Machine Learning Journey</h1>
+        
+        <div class="intro">
+            <h3>Introduction</h3>
+            <p>This portfolio documents my transformative journey through the Machine Learning module, marking a significant evolution from theoretical understanding to practical implementation. Through systematic engagement with diverse ML paradigms, collaborative projects, and critical discussions, I have developed both technical competencies and professional perspectives essential for responsible AI practice.</p>
+        </div>
+        
+        <h2>Knowledge of Machine Learning Algorithms</h2>
+        <p>My understanding of ML algorithms has progressed from superficial awareness to deep comprehension of their mathematical foundations and practical limitations. Initially, I viewed algorithms as black-box solutions; however, through hands-on implementation, I now appreciate their underlying mechanics and assumptions.</p>
+        
+        <p>The perceptron exercises in Unit 7 provided foundational insights into neural learning. Understanding the perceptron convergence theorem (Rosenblatt, 1958) revealed how simple linear classifiers learn through iterative error correction. This knowledge scaffolded my comprehension of deep learning in Unit 11, where I implemented CNNs achieving 88.34% accuracy on CIFAR-10. The progression from single perceptrons to deep architectures illuminated how complexity emerges from simple building blocks (Goodfellow et al., 2016).</p>
+        
+        <p>Clustering algorithms, particularly K-Means explored in Units 5-6, demonstrated unsupervised learning's power and limitations. The algorithm's sensitivity to initialization and assumption of spherical clusters became apparent through practical application. This experience proved invaluable when selecting appropriate algorithms for the Airbnb project, where I recognized that real-world data rarely conforms to algorithmic assumptions (Bishop & Bishop, 2024).</p>
+        
+        <p>The correlation and regression analyses in Unit 3 established statistical foundations crucial for understanding model evaluation. Experimenting with different noise levels and sample sizes revealed how data quality impacts model reliability—knowledge directly applied when discovering that aggressive augmentation degraded CIFAR-10 performance by 52%. This counterintuitive finding challenged conventional wisdom about data augmentation (Shorten & Khoshgoftaar, 2019), demonstrating the importance of empirical validation over theoretical assumptions.</p>
+        
+        <h2>Individual Contributions to Team Activities</h2>
+        <p>My role as Data Visualization Lead for the Unit 6 Airbnb project exemplified my approach to team contributions: bridging technical complexity and stakeholder comprehension. Transforming model outputs into executive-ready insights required not just technical skills but empathy for non-technical audiences. I developed a feature name translation system converting technical variables into business language, facilitating communication across expertise boundaries.</p>
+        
+        <p>In collaborative discussions, particularly the Unit 8-10 debate on AI writers, I contributed critical analysis of the "competence without comprehension" problem (Marcus & Davis, 2020). My responses to peers like Chaimaka emphasized how AI's fluency masks fundamental understanding gaps—insights that sparked productive dialogue about AI deployment ethics. These contributions weren't merely academic exercises but shaped team perspectives on responsible AI development.</p>
+        
+        <p>The peer review activities in Unit 2 showcased my analytical contributions. Examining Saeed's British Airways and Tasnika's Maersk analyses, I identified systemic vulnerabilities and proposed mitigation strategies. This collaborative knowledge construction demonstrated how diverse perspectives strengthen understanding—a principle I carried throughout the module.</p>
+        
+        <h2>Experience as a Development Team Member</h2>
+        <p>The most significant learning paradox occurred during Unit 11's individual project. Working independently on the CIFAR-10 deep learning project after the collaborative Airbnb visualization in Unit 6 highlighted how team experiences shape individual practice. The systematic experimentation approach—testing nine hyperparameter configurations and four architectures—reflected methodologies I had observed and discussed with peers throughout the module. This suggests that exposure to diverse problem-solving approaches in earlier units, even when working individually, creates a mental repository of strategies that enhance subsequent work.</p>
+        
+        <p>The transition from team-based (Unit 6) to individual work (Unit 11) revealed valuable insights about self-reliance and decision-making. Without teammates to validate choices, I developed stronger confidence in my judgment while maintaining the critical evaluation practices learned from peer discussions. The experience taught me that successful ML projects require not just algorithmic sophistication but also the ability to synthesize multiple perspectives independently—aligning with Hidayatullah et al.'s (2025) emphasis on autonomous learning competencies in AI development.</p>
+        
+        <p>Working individually also meant bearing full responsibility for project outcomes. This accountability drove deeper engagement with the material, as every failed experiment was mine to debug and every success mine to build upon. The isolation of individual work, particularly during late-night debugging sessions, paradoxically strengthened my appreciation for collaborative learning environments while proving I could succeed independently.</p>
+        
+        <h2>Impact on Professional and Personal Development</h2>
+        <p>This module has fundamentally reshaped my professional identity. I've evolved from an ML consumer to an ML creator, capable of not just using tools but understanding their construction and limitations. The Unit 11 project, where I built CNNs from scratch, epitomized this transformation. Debugging models at 2 AM taught resilience and systematic thinking that transcend technical domains.</p>
+        
+        <p>Professionally, I've developed critical perspectives on AI deployment ethics. The collaborative discussion on robo-writers crystallized my stance: AI should augment rather than replace human judgment in high-stakes contexts. This position, informed by Bender et al.'s (2021) "stochastic parrots" critique, now guides my approach to ML projects. I recognize that technical capability without ethical consideration risks harm—a responsibility I carry forward.</p>
+        
+        <p>The module's emphasis on professional issues—from data privacy to algorithmic bias—has prepared me for real-world ML practice where technical and ethical challenges intertwine. Understanding legal implications of AI decisions, explored throughout various units, positions me to navigate emerging regulatory frameworks like the EU AI Act.</p>
+        
+        <p>Personally, the journey has cultivated intellectual humility. Initial confidence in transfer learning's universality was humbled by its failure on CIFAR-10, teaching me to question assumptions and validate empirically. This growth mindset, viewing failures as learning opportunities, represents perhaps the module's most valuable gift.</p>
+        
+        <div class="conclusion">
+            <h3>Conclusion</h3>
+            <p>This ML journey has been transformative, developing technical skills while cultivating critical thinking about AI's societal implications. From understanding perceptrons to implementing deep learning, from individual coding to team collaboration, each experience has contributed to a holistic understanding of machine learning as both technical discipline and social responsibility. Moving forward, I'm equipped not just with algorithms and frameworks but with the critical perspective necessary for responsible AI development in an rapidly evolving landscape.</p>
+        </div>
+        
+        <div class="references">
+            <h2>References</h2>
+            <div class="reference-item">Bender, E.M., Gebru, T., McMillan-Major, A. and Shmitchell, S. (2021) 'On the dangers of stochastic parrots: Can language models be too big?', <em>Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency</em>, pp. 610-623.</div>
+            
+            <div class="reference-item">Bishop, C.M. and Bishop, H. (2024) <em>Deep Learning: Foundations and Concepts</em>. Cambridge: Springer.</div>
+            
+            <div class="reference-item">Cardon, P.W. and Coman, A.W. (2025) 'Professionalism and trustworthiness in AI-assisted workplace writing', <em>International Journal of Business Communication</em>, 62(1), pp. 45-67.</div>
+            
+            <div class="reference-item">Goodfellow, I., Bengio, Y. and Courville, A. (2016) <em>Deep Learning</em>. Cambridge, MA: MIT Press.</div>
+            
+            <div class="reference-item">Hidayatullah, M.H., Fahmi, M., Wahyuni, S. and Sari, D.P. (2025) 'A systematic literature review of artificial intelligence in academic writing', <em>Journal of Research on English and Language Learning</em>, 6(1), pp. 145-162.</div>
+            
+            <div class="reference-item">Marcus, G. and Davis, E. (2020) 'GPT-3, Bloviator: OpenAI's language generator has no idea what it's talking about', <em>MIT Technology Review</em>, 22 August.</div>
+            
+            <div class="reference-item">Rosenblatt, F. (1958) 'The perceptron: A probabilistic model for information storage and organization in the brain', <em>Psychological Review</em>, 65(6), pp. 386-408.</div>
+            
+            <div class="reference-item">Shorten, C. and Khoshgoftaar, T.M. (2019) 'A survey on image data augmentation for deep learning', <em>Journal of Big Data</em>, 6(1), pp. 1-48.</div>
+        </div>
+    </div>
+</body>
+</html>
